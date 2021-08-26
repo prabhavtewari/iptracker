@@ -10,7 +10,11 @@ code {
   font-family: 'Rubik', sans-serif;
 
 }
-
+.App
+{
+  height: 100vh;
+  overflow-y: hidden;
+}
 .headerwrap
 {
   background-image: url("./images/pattern-bg.png");
@@ -56,4 +60,44 @@ code {
   .ipinput{
     width:min(40%,400px) ;
   }
+}
+
+.formContainer
+{
+  width: 300px;
+  height: 300px;
+  
+}
+.formhead
+{
+  background-color: white;
+  padding: 20px 0 29px 0;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.sawowrapper
+{ 
+
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+
+
+
+  background: rgb(12,223,232);
+  background: -moz-linear-gradient(173deg, rgba(12,223,232,1) 0%, rgba(4,83,87,1) 100%);
+  background: -webkit-linear-gradient(173deg, rgba(12,223,232,1) 0%, rgba(4,83,87,1) 100%);
+  background: linear-gradient(173deg, rgba(12,223,232,1) 0%, rgba(4,83,87,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0cdfe8",endColorstr="#045357",GradientType=1);
+
+}
+
+.leaflet-container
+{
+  height: 70vh;
+  width: 100vw;
 }
