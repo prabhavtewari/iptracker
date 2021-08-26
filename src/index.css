@@ -10,3 +10,50 @@ code {
   font-family: 'Rubik', sans-serif;
 
 }
+
+.headerwrap
+{
+  background-image: url("./images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  z-index: 0;
+}
+.header{
+  width: 100vw;
+  padding-top: 30px;
+  color: white;
+  font-weight: 700 ;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+.ipinput
+{
+  width:80%;
+  margin-top: 20px;
+  border-radius:10px 0 0 10px;
+  font-weight: 500;
+  border: 0ch;
+
+}
+.submitarrow
+{
+  background-color: black;
+  border: 0ch;
+  border-radius: 0 10px 10px 0  ;
+  padding: 0 10px;
+  height: 38px;
+ 
+}
+.submitarrow img{
+  margin: auto 0 auto 0;
+  vertical-align: middle;
+}
+@media screen and (min-width: 576px) {
+
+  .ipinput{
+    width:min(40%,400px) ;
+  }
+}
