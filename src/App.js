@@ -1,10 +1,12 @@
-// import logo from './logo.svg';
-// import header from './Header';
 import React, { useState, useEffect } from "react";
-import rarrow from './images/icon-arrow.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sawo from "sawo";
 import Map from "./components/Map";
+import Dashboard from "./components/Dashboard";
+import rarrow from './images/icon-arrow.svg'
+
+
+
 
 
 
@@ -15,6 +17,19 @@ function App()
     const [isUserLoggedIn, setUserLoggedIn] = useState(false);
     const [payload, setPayload] = useState({});
     const sk = process.env.REACT_APP_SAWO;
+
+
+    const [data, setData] = useState({
+      ip: "192.212.174.101",
+      city: "Brooklyn",
+      country: "US",
+      lat: 34.04915,
+      lng: -118.09462,
+      postalCode: "10001",
+      timezone: "UTC -05:00",
+      isp: "SpaceX Starlink",
+    });
+    
     useEffect(() => {
     var config = {
     containerID: "sawo-container",
@@ -26,9 +41,13 @@ function App()
       setPayload(payload);
     },
   };
+  
   let sawo = new Sawo(config);
   sawo.showForm();
   }, []);
+
+
+
 
   return (
     <div className="App">
@@ -44,13 +63,15 @@ function App()
         ) 
         : 
         (
-          <div className="maincont">
+        <div className="maincont">
+        
+        
         <div className="headerwrap">
           <div className="header">
-            <form action="">
+            <form className="White" >
               IP Address Tracker
                 <div className="submitrow">
-                  <input className="ipinput" type="text" />
+                  <input className="ipinput DarkGray" type="text"/>
                   <button type="submit"  className="submitarrow">
                   <img src={rarrow} alt="" srcset="" />
                   </button>
@@ -59,18 +80,25 @@ function App()
           </div>
         </div> 
 
-        {/* <div className="rando"> */}
+
         <Map
-        center={ [51.505, -0.09]}
+        center={ [34.04915, -118.09462]}
         />
-        {/* </div> */}
+
+<Dashboard
+        ip={data.ip}
+        location={[data.city, data.country, data.postalCode]}
+        timezone={data.timezone}
+        isp={data.isp}
+          />
+
         </div>
 
 
       
       
       
-      )};
+       )}; 
     </div>
   );
 }
