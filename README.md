@@ -1,6 +1,7 @@
 ## Table of contents
 
 - [The challenge](#the-challenge)
+- [My Process](#my-process)
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built with](#built-with)
@@ -16,14 +17,26 @@ Users should be able to:
 - See their own IP address on the map on the initial page load
 - Search for any IP addresses or domains and see the key information and location
 
+### My Process
+
+I began with breaking down the project into following parts:
+- The banner section
+- Dashboard
+- Map
+- Integrating Sawo
+- Implementing  IPIFY
+
+I tackeled these sections one by one making sure to completely optimise each section before going on the next one. As I am not very familiar with using API's in react I did my best to make the project as funcctional as I could in the tight time frame. 
+
 ### Screenshot
 
+<p align='center'><img src="/screens/main.jpg">
+<p align='center'><img src="/screens/login.jpg">
+ <p align='center'><img src="/screens/mainm.jpg">
+      <img src="/screens/loginm.jpg">
 
+  
 
-![](./screens/login.jpg)
-![](./screens/main.jpg)
-![](./screens/loginm.jpg)
-![](./screens/mainm.jpg)
 
 
 
@@ -40,6 +53,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- SAWO
+- Leaflet js
 - [React](https://reactjs.org/) - JS library
 
 
